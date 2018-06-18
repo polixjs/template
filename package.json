@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/polixjs/template#readme",
   "dependencies": {
-    "polix": "0.0.8",
     "koa-body": "^2.5.0",
     "koa2-cors": "^2.0.5"
   },

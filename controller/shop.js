@@ -1,11 +1,11 @@
-const { Controller, Get } = require('polix');
+const { Controller, GET } = require('polix');
 
 class ShopController extends Controller {
   constructor(){
     super();
   }
 
-  @Get
+  @GET
   getInfo(ctx){
     ctx.body  = {
       shop: 'getInfo'

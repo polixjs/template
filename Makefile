@@ -1,6 +1,7 @@
 ESLINT  = ./node_modules/.bin/eslint
 BABEL   = ./node_modules/.bin/babel
 NAME    = 'polix-template'
+CLEAN   = ${shell rm -rf ./dist}
 PROCESS = 4
 
 install:
@@ -9,8 +10,12 @@ install:
 eslint:
 	${ESLINT} .
 
+clean:
+	@echo 'Clean files...'
+	${CLEAN}
+
 build:
-	${BABEL} --ignore node_modules,gulpfile.js  ./ -d dist
+	${CLEAN} ${BABEL} --ignore node_modules,gulpfile.js  ./ -d ./dist
 
 dev:
 	cd dist && node index.js

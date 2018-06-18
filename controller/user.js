@@ -1,4 +1,4 @@
-const { Controller, Get, Post, Del, Put  } = require('polix');
+const { Controller, GET, POST, DEL, PUT  } = require('polix');
 
 class UserController extends Controller {
 
@@ -6,7 +6,7 @@ class UserController extends Controller {
     super();
   }
 
-  @Post
+  @POST
   addUser(ctx){
     let req = ctx.request;
     let msg = req.body;
@@ -16,7 +16,7 @@ class UserController extends Controller {
     };
   }
 
-  @Get
+  @GET
   getUser(ctx){
     let req = ctx.request;
     let msg = req.query;
@@ -25,24 +25,32 @@ class UserController extends Controller {
     };
   }
 
-  @Get
+  @GET('info')
   getInfo(ctx){
     ctx.body = {
       v: 'v1.0'
     }
   }
 
-  @Put
+  @PUT
   updateUser(ctx){
     ctx.body = {
       status: true
     }
   }
 
-  @Del
+  @DEL
   delUser(ctx){
     ctx.body = {
-      sattus: true
+      status: true
+    };
+  }
+
+  @GET('status/:userId')
+  getStatus(ctx){
+    ctx.body = {
+      status: true,
+      userId: ctx.params.userId
     };
   }
 
