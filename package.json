@@ -1,0 +1,38 @@
+{
+  "name": "polix-template",
+  "version": "0.0.1",
+  "description": "polix template",
+  "main": "index.js",
+  "scripts": {
+    "dev": "babel-node index.js",
+    "eslint": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/polixjs/template.git"
+  },
+  "keywords": [
+    "polix"
+  ],
+  "author": "zhoumq",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/polixjs/template/issues"
+  },
+  "homepage": "https://github.com/polixjs/template#readme",
+  "dependencies": {
+    "polix": "0.0.8",
+    "koa-body": "^2.5.0",
+    "koa2-cors": "^2.0.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.3",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015-node5": "^1.2.0",
+    "babel-preset-es2016": "^6.24.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-eslint": "^4.0.2"
+  }
+}
