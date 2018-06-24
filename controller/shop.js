@@ -1,12 +1,9 @@
 const { Controller, GET } = require('polix');
 
 class ShopController extends Controller {
-  constructor(){
-    super();
-  }
 
   @GET
-  getInfo(ctx){
+  async getInfo(param, ctx){
     ctx.body  = {
       shop: 'getInfo'
     }

@@ -6,12 +6,12 @@ class UserService extends Service {
     this._name = {};
   }
 
-  addUser(userId,name){
+  async addUser(userId,name){
     this._name[userId] = name;
     return this;
   }
 
-  getUser(userId){
+  async getUser(userId){
     return this._name[userId];
   }
 }

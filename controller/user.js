@@ -2,55 +2,48 @@ const { Controller, GET, POST, DEL, PUT  } = require('polix');
 
 class UserController extends Controller {
 
-  constructor(){
-    super();
-  }
-
   @POST
-  addUser(ctx){
-    let req = ctx.request;
-    let msg = req.body;
-    this.service.user.addUser(msg.userId,msg.name);
+  async addUser(param, ctx){
+    this.service.user.addUser(param.userId,param.name);
     ctx.body = {
       result: 'ok'
     };
   }
 
   @GET
-  getUser(ctx){
-    let req = ctx.request;
-    let msg = req.query;
+  async getUser(param,ctx){
+    let user = await this.service.user.getUser(param.userId);
     ctx.body = {
-      user: this.service.user.getUser(msg.userId)
+      user
     };
   }
 
   @GET('info')
-  getInfo(ctx){
+  async getInfo(param, ctx){
     ctx.body = {
       v: 'v1.0'
     }
   }
 
   @PUT
-  updateUser(ctx){
+  async updateUser(param,ctx){
     ctx.body = {
       status: true
     }
   }
 
   @DEL
-  delUser(ctx){
+  async delUser(param,ctx){
     ctx.body = {
       status: true
     };
   }
 
   @GET('status/:userId')
-  getStatus(ctx){
+  async getStatus(param,ctx){
     ctx.body = {
       status: true,
-      userId: ctx.params.userId
+      userId: param.userId
     };
   }
 
