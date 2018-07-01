@@ -20,8 +20,10 @@ class UserController extends Controller {
 
   @GET('info')
   async getInfo(param, ctx){
+    let { curl } = this.app;
+    let result = await curl.get('https://www.baidu.com');
     ctx.body = {
-      v: 'v1.0'
+      data: result
     }
   }
 
