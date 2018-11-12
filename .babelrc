@@ -1,4 +1,10 @@
 {
-  "plugins": ["transform-decorators-legacy"],
-  "presets": ["es2015-node5", "es2016"]
+  "plugins": [
+    "transform-decorators-legacy",
+    "transform-class-properties"
+  ],
+  "presets": [
+    "es2015-node5",
+    "es2016"
+  ]
 }

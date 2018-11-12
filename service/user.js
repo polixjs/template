@@ -6,13 +6,18 @@ class UserService extends Service {
     this._name = {};
   }
 
-  async addUser(userId,name){
+  async addUser(userId, name) {
     this._name[userId] = name;
     return this;
   }
 
-  async getUser(userId){
+  async getUser(userId) {
     return this._name[userId];
+  }
+
+  async users() {
+    const {user} = this.app.entity;
+    return user.find();
   }
 }
 

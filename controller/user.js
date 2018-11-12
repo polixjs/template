@@ -49,6 +49,12 @@ class UserController extends Controller {
     };
   }
 
+  @GET
+  async users(param, ctx) {
+    const users = await this.service.user.users();
+    ctx.body = users;
+  }
+
 
 }
 
