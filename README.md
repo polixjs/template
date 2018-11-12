@@ -9,7 +9,7 @@ $ pol init example && cd example
 
 ## Start
 ```bash
-$ make dev
-# or
-$ ./bin/build.sh && cd dist && node index.js
+$ make
+$ make build
+$ make run-dev
 ```
