@@ -24,7 +24,7 @@ run-dev:
 	@cd dist && node index.js
 
 start:
-	NODE_ENV=prod pm2 start dist/index.js -i ${PROCESS} --name ${NAME} -o ./logs/out.log -e ./logs/error.log
+	@NODE_ENV=prod pm2 start dist/index.js -i ${PROCESS} --name ${NAME} -o ./logs/out.log -e ./logs/error.log
 
 stop:
 	@pm2 stop ${NAME}
