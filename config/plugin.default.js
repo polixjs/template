@@ -1,4 +1,1 @@
-exports.rpc = {
-  enable: false,
-  package: 'polix-grpc'
-}
+exports.rpc = {}
