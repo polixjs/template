@@ -1,4 +1,4 @@
-exports.rpc = {
-  enable: false,
-  package: 'polix-grpc'
+exports.curl = {
+  enable: true,
+  package: 'polix-request'
 }
